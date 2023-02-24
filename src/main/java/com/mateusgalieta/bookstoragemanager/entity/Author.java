@@ -1,8 +1,16 @@
 package com.mateusgalieta.bookstoragemanager.entity;
 
 import jakarta.persistence.*;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 
 @Entity
+@Data
+@Builder
+@NoArgsConstructor
+@AllArgsConstructor
 public class Author {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -13,4 +21,6 @@ public class Author {
 
     @Column(nullable = false)
     private Integer age;
+
+
 }
